@@ -81,7 +81,7 @@ class FormularioLivroState extends State<FormularioLivro> {
     final String nome = _controladorCampoNome.text;
     final String estado = _estadoInicialdoLivro;
     final int nota = _classificacao;
-    if (nome != null && nota != null) {
+    if (nome != null && nome != '' && nota != null) {
       final livroCriado = Livro(nome, estado, nota);
       Navigator.pop(context, livroCriado);
     }
